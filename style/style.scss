@@ -14,6 +14,9 @@
 }
 
 body {
+    transition: transform 0.5s, opacity 0.5s;
+    transform: translateX(-40px);
+    opacity: 0;
     box-sizing: border-box;
     background-color: var(--bg);
     color: var(--fg);
@@ -36,6 +39,18 @@ body {
             width: auto;
             margin-bottom: 16px;
         }
+    }
+}
+
+@media (max-width: 540px) {
+    body {
+        grid-template-areas:
+            "title"
+            "image"
+            "info"
+            "more_info"
+            "footer";
+            grid-template-columns: 1fr;
     }
 }
 
